@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <button>按钮1</button>
+    <button>按钮2</button>
+    <button>按钮3</button>
+    <button>按钮4</button>
+    <button>按钮5</button>
+    <button>按钮6</button>
+    <button>按钮7</button>
+    <script>
+        const btns = document.getElementsByTagName('button');
+        for(var i=0; i< btns.length;i++){
+            btns[i].onclick = function(){
+                alert(i);
+
+            }
+
+        }
+    </script>
+</body>
+</html>

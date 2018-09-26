@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    #box{
+        height: 100px;
+        width: 100px;
+        border: 1px solid #000000;
+    }
+    </style>
+</head>
+<body>
+    属性名字：<input type="text" id="txt1">
+    属性值：<input type="text" id="txt2"> 
+    <button id="btn"> 发送</button>
+    <div id="box"></div>
+
+    <script>
+
+        const txt1 = document.getElementById('txt1');
+        const txt2 = document.getElementById('txt2');
+        const btn = document.getElementById('btn');
+        const box = document.getElementById('box');
+        btn.onclick = function(){
+            let v1 = txt1.value;
+            let v2 =txt2.value;
+            //console.log(v1);
+         // console.log(v1,v2);
+            //box['style'][v1] = v2;
+            //  box.style.v1 = v2;
+            box['style'][v1] = v2;
+
+
+        }
+    
+    </script>
+</body>
+</html>

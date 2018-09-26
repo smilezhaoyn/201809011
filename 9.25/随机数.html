@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">点击</button>
+    <p id="p"></p>
+<script>
+    
+    let btn = document.getElementById('btn');
+    let p = document.getElementById('p');
+    let str = `1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM`;
+    let arr = [];
+
+    btn.onclick = function(){
+        arr.length = 0;
+            sum();
+            p.innerHTML = arr.join('');
+    }
+
+    function sum(){
+        if(arr.length>=4){return;};
+        let sj =str[Math.round(Math.random()*(str.length-1))] ;
+        if(!arr.includes(sj)){arr.push(sj)} ;
+        sum();
+
+    }
+
+    
+    
+    </script>
+</body>
+</html>

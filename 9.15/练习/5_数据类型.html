@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    
+    <style>
+        #box{
+            border: 1px solid #000000;
+
+        }
+    </style>
+
+</head>
+<body>
+    属性：<input type="text" >
+    值：<input type="text">
+    <button>发送</button>
+    <div id="box"></div>
+    <script>
+    
+    const txt1 = document.querySelectorAll('input')[0];
+    const txt2 = document.querySelectorAll('input')[1];
+    const btn = document.querySelector('button');
+    const box = document.querySelector('#box');
+
+    // btn.onclick = function(){
+    //     box.style[txt[0].value] = txt[1].value;
+
+    // }
+    // //  console.log(new String('abc'));
+    // let str = 'amijianvdje'
+    // // console.log(str.length)
+    // console.log(str[0])
+    // console.log(1+'1520'+true+undefined)
+
+    btn.onclick = function(){
+        let a1 = txt1.value;
+        let a2 = txt2.value;
+        box.innerHTML = `<p style="${a1}:${a2}px"></p>`;
+
+    }
+    </script>
+</body>
+</html>

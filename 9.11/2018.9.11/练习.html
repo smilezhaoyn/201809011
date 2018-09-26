@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #btn1{
+            background: #99fcff;
+        }
+        #btn2{
+            background: #ff593f;
+        }
+
+        #box{
+            height: 300px;
+            width: 300px;
+            border: 1px #54bfff solid;
+        }
+        .k1{
+            background: #28fff2;
+        }
+        .k2{
+            background: #ff1515;
+        }
+        .xian{
+            width: 300px;
+            height: 300px;
+            border: 1px solid #27b2ff;
+        }
+    </style>
+</head>
+<body>
+
+<button id="btn1">点击1</button>
+
+<button id="btn2">点击2</button>
+
+<div id="box"></div>
+
+
+
+<button class="k1">点1</button>
+<button class="k2">点2</button>
+<div class="xian"></div>
+<script>
+
+  //  document.getElementById('btn1').onclick = function() {
+  //      document.getElementById('box').style.display = 'none';
+
+  //  }
+
+ //   document.getElementById('btn2').onclick = function(){
+
+      //  document.getElementById('box').style.display = 'block';
+ //   }
+
+    document.getElementsByClassName('k1').onclick = function(){
+        document.getElementsByClassName('xian').style.display = 'none';
+
+    }
+
+    document.getElementsByClassName('k2').onclick = function(){
+        document.getElementsByClassName('xian').style.display = 'block';
+
+    }
+</script>
+</body>
+</html>

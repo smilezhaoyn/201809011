@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <button>按钮一(0)</button>
+    <button>按钮二(0)</button>
+    <button>按钮三(0)</button>
+
+    <script>
+        const btn = document.querySelectorAll('button');
+        for(let i = 0; i<btn.length;i++){
+            btn[i].num = 0;
+            btn[i].onclick = function(){
+                this.num ++;
+                if(this.num<3){
+                    this.innerText = `按钮一(${this.num})`;
+                }
+                else{
+                    this.disabled = true;//  如果  this.disabled = true   则num  值为3  不走了   按钮颜色变灰色
+                    console.log(this.num);  //如果  this.disabled = false  则num  值会一直走   而按钮会停再2  颜色不会变
+                }
+                
+
+            }
+            
+            
+
+
+        }
+    </script>
+</body>
+</html>

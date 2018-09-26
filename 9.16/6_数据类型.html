@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #box{
+            border: 1px solid #000;
+
+        }
+    </style>
+</head>
+<body>
+    属性：<input type="text">
+    值：<input type="text">
+    <button> 点击 </button> 
+    <div id="box"></div>
+
+    <script>
+
+        /*
+        数据类型
+        简单类型： string 布尔值  null number  undefined
+        复杂类型： symbol {}
+
+        null
+        现在没有将来可能有
+        元素没有获取的到为null
+        正则没有匹配项为null
+        对象销毁时为空
+
+        length  只能读不能写
+
+        字符串和其他类型+起来都是字符串  （除了symbol）
+        
+        
+        
+        */
+        const btn = document.querySelector('button');
+        const txt = document.querySelectorAll('input');
+        const box = document.querySelector('#box');
+
+        // console.log(new String('abc'));
+//string和new String的区别是
+//string 只有一个   而 new String 是一堆
+        let a = 'smvokokn';
+        console.log(a.length);
+        console.log(a[2]);
+        // a.length = 1;
+        // console.log(a);
+        console.log(+'5'+undefined+true) // 进行了非法的数字运算，所以是NaN
+
+        btn.onclick = function(){
+            box.innerHTML = `<p style="${txt[0].value}:${txt[1].value}px;"></p>`
+
+        }
+    </script>
+</body>
+</html>

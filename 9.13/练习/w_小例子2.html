@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    #box{
+        width: 300px;
+        height: 50px;
+        border: 1px solid #000000;
+    }
+    #con2{
+        overflow: hidden; /*隐藏溢出*/
+    }
+    #con2.hide{
+        height: 0;;
+    }
+    #con1.show{
+        height: 50px;;
+    }
+    .hide1{
+        display: none;
+    }
+    .show1{
+        display:block;
+    }
+
+    </style>
+</head>
+<body>
+    <div id="box">
+
+        <div id="con1" class="show">
+            <p id="font">珠峰培训</p>
+            <button id="xg">修改内容</button>
+        </div>
+
+        <div id="con2" class="hide">
+            <input type="text" id="txt">
+            <button id="qd">确定</button>
+            <button id="qx">取消</button>
+
+        </div>
+
+
+    </div>
+
+    <script>
+    
+    const xg = document.getElementById('xg');
+    const con2 = document.getElementById('con2');
+    const con1 = document.getElementById('con1');
+    const font = document.getElementById('font');
+    const txt = document.getElementById('txt');
+    const qd = document.getElementById('qd');
+    const qx = document.getElementById('qx');
+
+//点击修改
+    xg.onclick = function(){
+        con2.style.transition = '1s';
+        con2.className = 'show';
+        con1.className = 'hide1';
+        txt.value = font.innerHTML;
+
+    }
+
+   qx.onclick = function(){
+        con2.style.transition = 'none';
+        con2.className = 'hide';
+        con1.className = 'show1';
+
+   }
+    qd.onclick = function(){
+        font.innerHTML = txt.value;
+        qx.onclick();
+    }
+
+    </script>
+</body>
+</html>

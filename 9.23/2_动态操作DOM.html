@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box">
+
+        <div>
+
+        </div>
+
+    </div>
+    <script>
+        
+        /*
+        1,创建元素：createElement
+        参数：字符串  是一个标签名
+        2,appendChild   向元素的末尾。添加子节点
+
+        3,removeChild  删除一个子节点
+        接收一个节点类型的，参数是要删除的子元素
+
+        4，replaceChild  替换
+        replaceChild  （新的，旧的）
+
+        5，insertBefor  将新的元素插入旧的之前插入标签  
+
+        6，cloneNode   克隆元素，接收一个布尔类型的参数：true  false；
+           浅克隆   值为false
+           深克隆   值为true
+        cloneNode（）  阔号的是空  则为undefined
+
+        7,getAttribute    获取行间属性
+        setAttribute   设置行间属性
+        removeAttribute  删除行间属性
+
+        */
+        let box = document.getElementById('box');
+        let p = document.createElement('p');
+        box.appendChild(p);
+
+        
+        </script>
+</body>
+</html>

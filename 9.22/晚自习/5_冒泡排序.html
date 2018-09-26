@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+    let  ary = [12,3,88,100,67,39,20,99];
+
+    for(let j = 0;j<ary.length-1;j++){
+        let falg = true;
+    for(let i =0;i<ary.length-1-j;i++){
+        console.log(1);
+        if(ary[i]>ary[i+1]){
+            let a = ary[i+1];
+            ary[i+1] = ary[i];
+            ary[i] = a;
+            falg = false;
+        }
+
+    }
+    if(falg){
+        break;
+    }
+    }
+    console.log(ary);
+    </script>
+</body>
+</html>

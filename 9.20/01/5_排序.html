@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    /*
+    从小到大排序
+    sort
+    默认是从小到大来排序的，并且是根据字符串来排序的
+
+    如果使用回调函数，那么回调函数中的 返回值必须是一个数字类型
+
+    从小到大排序  a-b          如果a-b是正数，就换位置
+    从大到小排序  b-a          如果a-b是负数，就不换位置 
+    
+    */
+    let arr = [4,8,3,6,1]
+    console.log(arr.sort());
+    arr.sort(function(a,b){
+    return b-a;    
+    })
+    
+    
+    </script>
+</body>
+</html>

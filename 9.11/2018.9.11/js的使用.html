@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #btn1{
+            background: #27b2ff;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<button id="btn1">点击1 </button>
+
+<button id="btn2"> 点击2 </button>
+
+<script>
+   /*
+     行内注入JS
+          alert系统的提示框，里面可以放数据，但是默认
+          会被数据的toString 方式去默认转换
+          console.log(document.getElementByID('ID名字')) ; 打印
+     script 尽量放在body的上面，是能够获取
+
+
+     在script标签中去写代码
+          1.获取元素（标签）
+             通过ID的方式去获取元素
+                document.getElementByID('ID名字')
+                页面中的通过ID的方式去获取元素
+
+          事件：
+              点击，鼠标滚轮，触摸屏幕，键盘
+              点击 -> onclick
+              鼠标移入 ->  onmouseover
+
+         外链：
+         <script src="文件地址">
+
+         = 赋值
+              把右边的值赋给左边
+         function 函数
+              把可以执行的JS代码放到一个叫做function的容器 里边
+  */
+
+document.getElementById('btn1').onclick = function(){
+    alert(1);
+
+}
+
+
+
+</script>
+
+</body>
+</html>

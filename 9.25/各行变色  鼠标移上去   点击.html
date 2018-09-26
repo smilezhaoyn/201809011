@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <ul id='ul1'>
+            <li>1</li>   
+            <li>2</li>   
+            <li>3</li>   
+            <li>4</li>
+        </ul>
+<script>
+    const ul = document.getElementById('ul1');
+    let li = document.querySelectorAll('li');
+    for(let i =0;i<li.length;i++){
+
+        if(i%2 == 0){
+            li[i].style.background = 'red'
+            li[i].setAttribute('bg','red')
+        }else{
+            li[i].style.background = 'yellow'
+            li[i].setAttribute('bg','yellow')
+        }
+        li[i].onmouseover = function(){
+            this.style.background = 'pink'
+        }
+        li[i].onmouseout = function(){
+            this.style.background = this.getAttribute('bg');
+            console.log(this)
+        }
+        li[i].onclick = function(){
+            alert('我是第'+(i+1) +'个li');
+        }
+    }
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // console.log(new Date);
+    let d = new Date;
+    // console.log(d.getTime())    时间戳  number类型
+    // console.log(+d)  获取时间戳的方法
+    let y = d.getUTCFullYear();
+    let m = d.getMonth();
+    let ri = d.getDate();
+    let zj = d.getDay();
+    let h = d.getHours();
+    let fz =d.getMinutes();
+    let miao = d.getSeconds();
+    //位数  都是两位  
+    function tDOM(ws){
+        // if(ws<10){
+        //     return '0'+ws;
+        // }else{
+        //     return ''+ws;
+        // }
+        return ws<10?'0'+ws:''+ws;
+    }
+    console.log(y+'年'+tDOM(y)+'月'+tDOM(ri)+'日'+tDOM(h)+'时'+tDOM(fz)+'分'+tDOM(miao)+'秒')
+    // console.log(tDOM(9))
+    </script>
+</body>
+</html>

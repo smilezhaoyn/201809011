@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        function sum(){
+            let num = 0;
+            for(let i=0;i<arguments.length;i++){
+                //     let a = Number(arguments[i]);
+                // if(!isNaN(parseInt(a))){
+                //     num+= a;
+                // }
+                if(typeof arguments[i] == 'number' && parseInt(arguments[i])==parseInt(arguments[i])){
+                        num +=arguments[i];
+                }
+
+            }
+            return num;
+        }
+        let s = sum(1,2,3,'2px',54,true,'',function(){},{});
+        console.log(s)
+        // console.log(parseInt('2px'));
+        </script>
+</body>
+</html>

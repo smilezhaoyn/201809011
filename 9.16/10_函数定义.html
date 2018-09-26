@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+    /*
+    函数被创建的时候，会自动在这个函数里边挂一些属性和方法
+
+    常用的属性：  name prototype
+    方法： 
+    */
+    // function fn(){
+
+    // }
+    // console.log(fn());  //输出undefined  原因是变量没有赋值
+    // console.log(fn);   //输出一个函数
+    // console.dir(fn); 
+
+    // let a = '';    
+    // console.log(a.num);  // undefined
+
+        // function fn(a,b){
+        //     console.log(arguments)
+        // }
+        // fn(1,2);
+
+        function fn1(a){
+            // a = 3;
+            // console.log(a);
+            // arguments[0] = 2;
+            // console.log(a);
+            arguments.a = 10;
+            // let s = 1;
+            // s.a = 10000;
+            // // console.log(arguments.a);
+            // console.log(s.a);  //undefined   一个变量和常量组合是undefined
+
+            console.log(a == arguments[0]);
+        }
+        fn1(2);
+    </script>
+    
+</body>
+</html>

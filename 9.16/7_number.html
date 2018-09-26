@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        number:正数 负数  浮点数...
+
+        在number中  ''  null  []  都是0
+        变为整数的是  parseInt
+        查看数据类型  typeof
+        转为小数 parseFloat
+        保留两位小数  toFixed
+        */
+       console.log(parseInt('2.7'));   //结果是2
+       console.log(typeof(''));  //string
+       console.log(typeof({}));  //object
+       console.log(typeof([]));
+       console.log(typeof(undefined));   //undefined
+       console.log(typeof(null));  //object
+       console.log(typeof(true)); 
+
+       console.log(parseFloat('25.3641'));
+       let num = 26.6256;
+       console.log(num.toFixed(2));
+
+       console.log(isNaN('')); //是NaN  那就输出  true  不是NaN    那就输出  false
+        </script>
+</body>
+</html>

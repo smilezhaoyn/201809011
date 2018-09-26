@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box"></div>
+    
+    <script>
+    
+    let w = '100';
+    let h = '200';
+    let b = 'red'; 
+
+    let box = document.getElementById('box');
+    // box.innerHTML = '<div style="width:100px; height:300px; background:red;"></div>';
+    // box.innerHTML = '<div style="width:'+w+'px; height:'+h+'px; background:'+b+';"></div>';
+    box.innerHTML = `<div style="width:${w}px; height:${h}px; background:${b};"></div>`
+
+    //Number
+
+    console.log(Number(true));   //   1
+    console.log(Number(false));  //  0
+    console.log(Number(''));     //  0
+    console.log(Number({}));     //NaN
+    console.log(Number([]));     //  0
+    console.log(Number(undefined));  //NaN
+    console.log(Number(null));   //  0
+  
+    console.log(parseInt('10'))  // 10
+    console.log(parseInt('null'));  //NaN
+    console.log(parseInt('[]'));   //NaN
+    console.log(parseInt({})); //NaN
+
+
+    // 布尔值
+    console.log(Boolean(true));  //true
+    console.log(Boolean(false));// false
+    console.log(Boolean({}));   //true
+    console.log(Boolean([]));   //true
+    console.log(Boolean(''));   // false
+    console.log(Boolean(' '));    //true
+    console.log(Boolean(undefined));  //false
+    
+     
+    </script>
+    
+
+    
+</body>
+</html>

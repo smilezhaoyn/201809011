@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #con{
+            width: 300px;
+            height: 200px;
+            border: 1px solid #000000;
+        }
+    </style>
+</head>
+<body>
+<div id="con"></div>
+<input type="text" id="txt">
+<button id="fs">发送</button>
+
+<script>
+
+    const con = document.getElementById('con');
+    const txt = document.getElementById('txt');
+    const fs = document.getElementById('fs');
+    fs.onclick = function(){
+
+        //con.innerHTML=txt.value;
+        //con.innerHTML=con.innerHTML+txt.value;//前边输入和后边输入  都显示在一行
+
+      // con.innerHTML = con.innerHTML +'<p>'+ txt.value +'</p>'//  1. 换行字符串拼接
+
+       con.innerHTML = con.innerHTML + `<p>${txt.value}</p>`;  // 2.用 ``  并且${}来作为字符串得拼接
+
+
+    }
+</script>
+    
+</body>
+</html>

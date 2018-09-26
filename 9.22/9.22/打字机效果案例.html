@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>打字机效果</title>
+    <style>
+        .caret {
+            content: "";
+            display: inline-block;
+            width: 2px;
+            height: 1em;
+            margin-bottom: -2px;
+            margin-left: -2px;
+            background-color: #333;
+            animation: blink-caret .5s step-end infinite;
+            /*step-end相当于steps(1,end)*/
+        }
+        
+        @keyframes blink-caret {
+            /* 0% {可以省略不写
+                opacity: 1;
+            } */
+            50% {
+                opacity: 0;
+            }
+            /* 100% {可以省略不写
+                opacity: 1;
+            } */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="typing">
+        <span class="typing-text">
+            定时器打字机效果，
+            换行功能有待进一步开发。
+            over
+        </span>
+        <i class="caret"></i>
+    </div>
+    <script>
+        let textWrap = document.querySelector(".typing-text"),
+            text = textWrap.innerHTML;
+        let i = 0;
+        textWrap.innerHTML = "";
+        const typer = setInterval(function() {
+            textWrap.innerHTML += text[i++];
+            if (i === text.length) clearInterval(typer);
+        }, 200);
+    </script>
+</body>
+
+</html>

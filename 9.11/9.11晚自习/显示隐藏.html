@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #btn1{
+            background-color: bisque;
+        }
+        #btn2{
+            background-color: aquamarine;
+        }
+        #box{
+            border:1px solid #000000;
+            width: 100px;
+            height: 100px;
+            transition:0.5s;
+            background: #000000;
+        }
+    </style>
+</head>
+<body>
+<button id="btn1">点击1</button> 
+<button id="btn2">点击2</button>
+<div id="box"></div>
+
+<script>
+    //点击1隐藏   点击2显示
+    /*
+document.getElementById('btn1').onclick = function(){
+    document.getElementById('box').style.display = 'none';
+
+}
+
+document.getElementById('btn2').onclick = function(){
+    document.getElementById('box').style.display = 'block';
+}
+*/
+
+
+//点击2  有速度得缩放回去
+/*
+document.getElementById('btn2').onclick = function(){
+    document.getElementById('box').style.width = '0';
+    document.getElementById('box').style.height = '0';
+    document.getElementById('box').style.background = '0';
+    document.getElementById('box').style.opacity = '0';
+
+}*/
+
+//简写有速度得缩放
+
+let btn1 = document.getElementById('btn1');
+let btn2 = document.getElementById('btn2');
+let box = document.getElementById('box');
+
+btn2.onclick = function(){
+    box.style.width = '0';
+    box.style.height = '0';
+    box.style.background = '0';
+    box.style.opacity = '0';
+}
+</script>
+
+</body>
+</html>

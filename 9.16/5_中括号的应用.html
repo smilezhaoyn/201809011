@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    #box{
+        border: 1px solid #000;
+
+    }
+    </style>
+</head>
+<body>
+    属性：<input type="text">
+    值：<input type="text">
+    <button>变变变</button>
+    <div id="box"></div>
+    <script>
+    const txt = document.querySelectorAll('input');
+    const btn = document.querySelector('button');
+    const box = document.querySelector('#box');
+    btn.onclick = function(){
+        // box.style[txt[0].value] = txt[1].value;
+
+        // box.style.txt[0].value = txt[1].value;  //这个是不对的   变量必须的放在中括号中
+
+
+    }
+
+    
+    </script>
+</body>
+</html>

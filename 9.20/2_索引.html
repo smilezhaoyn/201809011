@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <button>按钮一</button>
+    <button>按钮二</button>
+    <button>按钮三</button>
+    <div id="box">1111</div>
+    <script>
+        const btn = document.querySelectorAll('button');
+    let arr = ['1111','2222','33333']
+    for(var i=0;i<arr.length;i++){
+        btn[i].num= i;
+        // console.log(btn[i].num)
+        btn[i].onclick = function(){
+            // console.log(i)
+            box.innerHTML = arr[this.num]
+
+        }
+    }
+    
+    </script>
+</body>
+</html>

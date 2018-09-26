@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">炸弹</button>
+    <button id="btn1">拆弹专家</button>
+    <script>
+    /*
+    setTimeout  炸一次  fn,time,第一个函数的参数
+
+    setInterval  连续炸
+    返回值为数字，代表有多少个定时器炸弹
+    
+    */
+    let a = 0;let b = 0;
+    btn.onclick = function(){
+
+        a = setTimeout(function(a){
+            alert(a);
+        },2000,'炸死了');
+        b = setInterval(function(b){
+            alert(b);
+        },1000,'炸不死2');
+        console.log(a,b);
+    }
+    btn1.onclick = function(){
+        clearTimeout(a);
+        clearInterval(b);
+        alert('哈哈 我已经将你的炸弹拆了 你炸不了了吧~~~~');
+
+    }
+    </script>
+</body>
+</html>

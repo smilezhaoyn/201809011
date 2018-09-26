@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    /*数组的排序
+
+    1，sort  排序  
+    */
+    let arr = [12,3,88,100,67,39,20,99];
+    for(let j = 0;j<arr.length-1;j++){
+        let fa = true;
+    for(let i=0;i<arr.length-1-j;i++){
+        console.log(1);
+        if(arr[i]>arr[i+1]){
+            let a = arr[i+1];
+            arr[i+1] = arr[i];
+            arr[i] = a;
+
+            fa = false;
+            }
+    }
+    if(fa){
+
+         break;// 终止整个大循环；
+
+    }
+    }
+    console.log(arr);
+    </script>
+</body>
+</html>

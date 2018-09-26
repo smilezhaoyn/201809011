@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box"></div>
+  <script>
+  //字符串拼接
+  let w = 100;
+  let h = 100;
+  let b = 'red';
+  let box = document.getElementById('box');
+    //   box.innerHTML = '<div style="width:100px; height:200px; background:red;"></div>';
+    // box.innerHTML = '<div style="width:'+w+'px; height:'+h+'px; background:'+b+';"></div>';
+    box.innerHTML = `<div style="width:${w}px; height:${h}px; background:${b};"></div>`
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    #box{
+        height: 300px;
+        width: 200px;
+        background: red;
+    }
+    .y{
+        background: #000000;
+
+    }
+    
+    </style>
+</head>
+<body>
+   <div id="box" style=" background:yellow;">
+
+   </div> 
+   <script>
+//    let box = document.getElementById('box');
+//    box.style.background = 'yellow';
+   document.onclick = function(){
+       document.getElementById('box').className = 'y';
+
+   }
+   </script>
+</body>
+</html>

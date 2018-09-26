@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        
+        数组的算法：  去重  冒泡排序   插入排序    快速排序
+
+        1，去重：将重复的项去掉
+
+        2,排序的去重
+            1）先对数组进行排序；
+            2）p判断相邻的两项是否相等，如果相等，说明该项是重复项，删除即可
+        
+        */
+    // let arr = [12,45,66,78,66,12,88]
+    // let a = [];
+    // for(let i =0;i<arr.length;i++){
+    //     let cur = arr[i];
+    //     if(a.indexOf(cur)=== -1){
+    //         a.push(cur);
+    //     }
+    // }
+    // console.log(a);
+    // //对象的属性名不能重复，如果对象的属性名重复，后面会将前面的进行覆盖
+    // let obj = {a:1,a:100}
+    // console.log(a)
+
+        //终止本轮循环   continue;
+
+    let arr = [12,45,66,78,66,12,88]
+    let obj = {};
+    for(let i=0;i<arr.length;i++){
+        let cur = arr[i];
+        //给obj这个对象新增键值对。
+       if(obj[cur] === cur){
+           arr.splice(i,1);
+           i--;
+           //数据塌陷问题，如果删除掉数据的某一项，那么该项成员后面的所有成员的索引都要进行
+          // 重新计算，这样是很消耗性能的
+           continue;//结束本轮循环
+       }
+       obj[cur] = cur;
+    }
+
+    //删除最后一项的 pop  splice    arr.length--
+    </script>
+</body>
+</html>

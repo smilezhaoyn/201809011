@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .ys{
+            background: brown;
+        }
+        div{
+            width: 300px;
+            height: 300px;
+            border: 1px dashed #000;
+            display: none;
+        }
+        .show{
+            display: block;
+        }
+        button{
+            width: 98px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <button class="ys">新闻</button>
+    <button>娱乐</button>
+    <button>科技</button>
+    <div class="show">新闻新闻新闻新闻新闻新闻新闻新闻</div>
+    <div>娱乐娱乐娱乐娱乐娱乐娱乐娱乐娱乐娱乐娱乐娱乐娱乐娱乐娱乐娱乐</div>
+    <div>科技科技科技科技科技科技科技科技科技</div>
+    <script>
+    const btn =document.querySelectorAll('button');
+    const nr =document.querySelectorAll('div');
+    let btn1 = btn[0];
+    for(var i=0;i<btn.length;i++){
+        btn[i].index = i;
+        btn[i].onclick = function(){
+            btn1.className = '';
+            nr[btn1.index].className= '';
+            this.className = 'ys'
+            nr[this.index].className ='show';
+            btn1 = this;
+        }
+
+    }
+    
+    
+    
+    </script>
+</body>
+</html>

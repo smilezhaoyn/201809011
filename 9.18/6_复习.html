@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box">
+    </div>
+    <script>
+    
+    let 小明 = {
+        home:'杭州',
+        age:'28',
+        job:'前端',
+        son:[{
+              name:'等等',
+              age:'15',
+              obj:'初中',  
+             },{
+                 name:'小花',
+                 age:'50',
+                 obj:'小班'
+             }
+        ]
+    }
+    let p = '<p>小明 ：'
+    for(let a in 小明){
+
+        if(a == 'son'){
+            p += '孩子'+小明[a].length+'个';
+        }else{
+            p+= a + 小明[a] + ','
+        }
+    }
+    p += '</p>';
+    box.innerHTML+= p
+
+    let ul = '<ul>';
+    let mm = 小明['son']
+    for(let i = 0;i<mm.length;i++){
+        ul += `<li>${mm[i]['name']}:年龄:${mm[i]['age']}工作：${mm[i]['obj']}</li>`
+    }
+    ul += '</ul>'
+
+
+    box.innerHTML += ul;
+    </script>
+</body>
+</html>

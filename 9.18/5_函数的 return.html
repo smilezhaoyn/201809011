@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function fn(a,b){
+        console.log(a+b);
+    return function(a,b){
+        console.log(a*b);
+
+    }
+    }
+    let f = fn(4,6);
+    console.log(f())   //  结果是  10  NaN  undefined
+    //为什么是NaN  是因为   return 后边   a,b 而下边没有传形参  所以是undefined   进行了非法运算   是NaN
+    
+
+
+    function fn(a,b){
+        console.log(a+b);
+    return function(){
+        console.log(a*b);
+
+    }
+    }
+    let f = fn(4,6);
+    console.log(f())     //结果是  10   24  undefined
+    </script>  
+</body>
+</html>

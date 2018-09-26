@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+    
+    // for(var i=0; i<5;i++){
+    //     alert('大循环'+i);//0,4
+    //     for(var j=0; j<3;j++){
+    //         alert('小循环'+j);//0,1,2
+
+    //     }
+    //     alert(i);
+    // }
+    
+    
+
+
+    for(var i=0;i<5;){
+        alert('大循环的' + i); //大循环的0,4.....
+        for(var i=0;i<3;i++){
+            alert('小循环'+ i);
+            console.log(i); //0,1,2
+        }
+        alert(i);
+        i++;
+    }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .ys{
+            background: red;
+            }
+        div{
+            border: 1px  solid  #000;
+            height: 300px;
+            width: 300px;
+            display: none;
+        }
+        .show{
+            display: block;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <button class="ys">娱乐</button>
+    <button>新闻</button>
+    <button>体育</button>
+    <div class="show">这是一个娱乐新闻</div>
+    <div>这是一个新闻新闻</div>
+    <div>这是一个体育新闻</div>
+
+    <script>
+    const  btn = document.querySelectorAll('button'),
+    div = document.querySelectorAll('div');
+
+    for(var i =0;i<btn.length;i++){
+        btn[i].index = i;
+
+         btn[i].onclick = function(){
+
+             for(var j=0;j<btn.length;j++){
+                 btn[j].className = '';
+                 div[j].className = '';
+             }
+             this.className = 'ys';
+             div[this.index].className = 'show';
+            //  div[i].className = 'show';
+
+
+         }
+
+
+    }
+    
+    
+    </script>
+</body>
+</html>

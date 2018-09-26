@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">点击</button>
+    <ul id="ul">
+        <li id="li1">1</li>
+        <li id="li1">2</li>
+        <li id="li3">3</li>
+        <li id="li4">4</li>
+        <li id="li5">5</li>
+        <li id="li6">6</li>
+    </ul>
+  <!--
+    <dt>
+        <dd>eee</dd>
+        <dd>dd</dd>
+        <dd>f</dd>
+        <dd>ddd</dd>
+    </dt>
+-->
+    <script>
+    
+    const lis = document.getElementsByTagName('li');
+    const btn = document.getElementById('btn');
+
+    // const dd = document.getElementsByTagName('dd');
+    // dd[0].style.background="red";
+
+    btn.onclick = function(){
+
+        for(let i=0;i<lis.length;i++){
+            lis[i].style.background = 'red';
+
+        }
+    }
+    
+    </script>
+</body>
+</html>

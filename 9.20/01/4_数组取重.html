@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    /*
+    去重：去除重复项
+    因为splice 是会修改原数组的，所以在删除之后循环减一，就能不跳过删除之后的数据，直接进行比较
+    */
+    let arr = [1,7,2,3,6,3,9,8,6];
+    for(let i=0;i<arr.length;i++){
+            for(let j=i+1;j<arr.length;j++){
+                if(arr[i] == arr[j]){
+                    arr.splice(i,1)
+                    j--;
+                }
+            }
+    }
+    console.log(arr);
+
+
+// 去重复，或滤掉
+// Set、里边不允许出现重发重复
+    console.log([...new Set(arr)]);    new Set     
+    </script>
+    
+</body>
+</html>

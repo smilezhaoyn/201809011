@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<link id="link" rel="stylesheet" href="" type="text/css">
+</head>
+<body>
+<button id="btn1">颜色1</button>
+<button id="btn2">颜色2</button>
+<script>
+    const btn1 = document.getElementById('btn1');
+    const btn2 = document.getElementById('btn2');
+    const link = document.getElementById('link');
+
+    btn1.onclick = function () {
+        //console.log(1);
+        link.href = 's1.css';
+
+    }
+
+    btn2.onclick = function () {
+        link.href = 's2.css';
+
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //用indexoF来去重
+
+    // let ary = [12,45,66,78,66,12,88,45];
+    // let a = [];
+    // for(let i =0;i<ary.length;i++){
+    //     let arr1 = ary[i]
+    //     if(a.indexOf(arr1)==-1){
+    //         a.push(arr1)
+    //     }
+    // }
+    // console.log(a);
+
+        let ary = [12,45,66,78,45,12,88,45];
+        let obj ={};
+        for(let i=0;i<ary.length;i++){
+            // console.log(1);
+            let cur =ary[i];
+            if(obj[cur]==cur){
+                ary[i] = ary[ary.length-1];
+                ary.length--;
+                i--;
+                continue;
+            }
+            obj[cur] = cur;
+        }
+        console.log(ary);
+
+    
+    </script>
+</body>
+</html>

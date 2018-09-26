@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    /*
+    new Date 
+
+    可以拿到当前客户端的时间，是不可靠的
+    前端都不安全，服务器的时间相对安全
+
+    倒计时
+    数码时钟
+    
+    
+    
+    */
+    console.log(new Date);
+    let d = new Date;
+    console.log(d.getTime());   //时间戳，number 类型  从1990年9.1日到现在的秒数
+    console.log(+d)   //  获取时间戳的方式
+
+    let y = d.getFullYear();
+    let m = d.getMonth()+1;   //    月份需要  +1
+    let dd = d.getDate;  //  多少号
+    let zhouji = d.getDay;   //周天是0 
+    let shi = d.getHours();    //小时
+    let fen = d.getMinutes();    //分
+    let miao = d.getSeconds();  //秒 
+
+    function tDou(n){
+        // if(n<10){
+        // return '0'+n;
+        // }else{
+        //     return ''+n;
+        // }
+       
+    }
+    let arr = tDou(9);
+    console.log(arr)
+
+    
+    </script>
+</body>
+</html>

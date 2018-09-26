@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+    box li{
+        list-style: none;
+        margin: 0 10px;
+        width: 80px;
+
+    }
+    .ys{
+        color: red;
+    }
+    
+    </style>
+</head>
+
+<body>
+    <button>下一站</button>
+    <ul id="box">
+        <!-- <li></li> -->
+    </ul>
+    <script>
+    let arr = ['西直门','大钟寺','五道口','上地','西二旗','龙泽','回龙观','霍营','立水桥','东直门'];
+    const btn = document.querySelector('button');
+    const box = document.querySelector('#box');
+    let li = '';
+    let num = 0;
+    for(let i =0;i<arr.length;i++){
+        li += `<li class="${i==0?'ys':''}">${arr[i]}</li>`;
+        // console.log(li);
+    }
+    box.innerHTML = li;
+    
+    let lis = document.querySelectorAll('li');
+    btn.onclick = function(){
+        num ++;
+        for(let i = 0;i<lis.length;i++){
+            lis[i].className = '';
+        }
+
+        lis[num%=lis.length].className = 'ys';
+
+    }
+    </script>
+</body>
+</html>

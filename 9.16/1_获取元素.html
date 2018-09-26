@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    #box{
+        width: 100px;
+        height: 200px;
+        background: red;
+    }
+    y.{
+        background: #000;
+
+    }
+    
+    </style>
+</head>
+<body>
+    <div id="box" style="background:#000000;"> </div>
+    <div></div>
+    <ul>
+        <li class="li1">
+            <span>这是第一个</span>
+        </li>
+        <li class="li1"></li>
+        <li class="li1">
+            <span>这是第二个</span>
+        </li>
+        <li class="li1"></li>
+    </ul>
+    <script>
+        /*
+        = 是赋值的意思
+        == 是比较的意思
+
+        可以通过ID的方式来获取
+        document.getElementById(id名)
+        ID在页面中只能有一个
+
+        通过TagName来获取标签（一个获取一组元素，是复合类型）
+        document.getElementByTagName(标签名字)
+
+        通过ClassName来获取  类的名
+
+        document.getElementByClassName
+        
+        */
+    
+    // let name = 'box';
+    // console.log(document.getElementById('box').style.background);    //   red
+
+    //颜色不会显示，因为div class  style 是有优先级的    style  >   div   >  class
+    // document.onclick = function(){
+    //     document.getElementById('box').className = 'y';
+    // }   //颜色不会改变
+
+
+    // document.getElementById('box').style.background = 'skyblue';   //style是可以直接改变颜色的
+    
+    // console.log(box);  //console.log(box)   直接输出box  是一个div     
+                      //console.log('box')  是直接输出一个字符串   是  box
+
+
+    //  document.getElementsByTagName('div')[0].style.background = 'red';   //输出为红色块
+
+
+    // console.log(document.getElementsByTagName('*'));   //*是通配
+
+    // console.log(document.getElementsByName('li2'));
+    // document.getElementsByClassName('li1')[0].style.background = 'red';
+
+//    console.log(document.getElementsByClassName('li1')[2].getElementsByTagName('span')[0].innerHTML) ;
+
+    // console.log(document.querySelector('.li1'));
+
+    console.log(document.querySelector('#box'));
+    </script>
+</body>
+</html>

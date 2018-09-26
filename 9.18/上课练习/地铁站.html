@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+    
+    #box li{
+    width: 80px;
+    float: left;
+    list-style: none;
+    margin: 0 10px;
+    }
+    .ys{
+        color: red;
+    }
+    .hs{
+        color: #000;
+    }
+    </style>
+</head>
+<body>
+  <button>下一站</button>  
+    <div id="box">
+        <ul>
+            <li class="ys">西直门 > </li>
+            <li>大钟寺 > </li>
+            <li>知春路 > </li>
+            <li>五道口 > </li>
+            <li>上地 > </li>
+            <li>西二旗 > </li>
+            <li>龙泽 > </li>
+            <li>回龙观 > </li>
+            <li>霍营 > </li>
+            <li>立水桥 > </li>
+            <li>东直门  </li>
+        </ul>
+    </div>
+  <script>
+        const btn = document.querySelector('button');
+        const li = document.querySelectorAll('li');
+    //    let a = ['西直门','大钟寺','知春路','五道口','上地','西二旗','龙泽','回龙观','霍营','立水桥','东直门'];
+    //    box.innerHTML = a[0];
+        li[0].style.className = 'ys';
+        let num = 1;
+
+    //    btn.onclick = function(){
+    //        for(let num = 0;num<li.length-1;num++){
+    //            if(num<li.length){
+    //             li[num].className = '';
+    //            }else{
+    //                li[num].className = 'ys'
+    //            }
+    //        }
+    //         if(num<li.length){
+    //             // console.log(li[0]);
+    //             li[num].className = 'ys';
+    //             num++;
+    //         }else{
+    //             alert('你已经到最后一站了');
+
+    //         }
+            
+    //    }
+
+         btn.onclick = function(){
+           for(let num = 0;num<li.length;num++){
+                li[num].className = '';
+            }
+
+            // if(num<li.length){
+            //     // console.log(li[0]);
+            //     li[num].className = 'ys';
+            //     num++;
+            // }else{
+            //     alert('你已经到最后一站了');
+
+            // }
+
+            if(num<li.length){ 
+                li[num].className = 'ys';
+                num++;
+                // console.log(num%li.length)
+                // console.log(num);
+            }
+            li[num%=li.length].className = 'ys'
+       }
+
+
+  </script>
+ 
+</body>
+</html>

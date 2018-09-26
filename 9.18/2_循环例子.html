@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box"></div>
+    <script>
+    
+    let 小明={
+        city:'北京',
+        age:'30',
+        zhiy:'设计',
+        mm:[
+            {
+                name:'等等',
+                age:'6',
+                zhiye:'小班'
+            },
+            {
+                name:'小花',
+                age:'3',
+                zhiye:'小孩'
+            }
+
+        ]
+    }
+    
+
+    let p = '<p>小明：'
+    for(let b in 小明){
+        if(b === 'mm'){
+            // console.log(b == 'mm');
+           p += '妹妹有'+小明[b].length+'个'
+        }
+        else{
+            p += b+':'+小明[b]+','
+
+        }
+    }
+    
+    p +='</p>'
+    box.innerHTML += p;
+
+    let ul = '<ul>'
+    let meimei = 小明['mm']
+    for(let i =0;i<meimei.length;i++){
+        ul+= `<li>${meimei[i]['name']}:年龄：${meimei[i]['age']}职业：${meimei[i]['zhiye']}</li>` 
+    }
+      ul+='</ul>'
+      box.innerHTML += ul
+    </script>
+</body>
+</html>

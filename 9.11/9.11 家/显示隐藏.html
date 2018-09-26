@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+
+        #btn1{
+            background: yellow;
+        }
+        #btn2{
+            background: green;
+        }
+    #box{
+        border: 1px solid #000000;
+        height: 300px;
+        width: 100px;
+        background: #000000;
+        transition: 0.5s;
+    }
+    
+    </style>
+</head>
+<body>
+    <button id="btn1">点击1 </button>
+    <button id="btn2">点击2</button>
+    <div id="box"></div>
+    <script>
+        /*
+    document.getElementById('btn1').onclick = function(){
+        document.getElementById('box').style.display = 'none';
+
+    }
+    document.getElementById('btn2').onclick = function(){
+        document.getElementById('box').style.display = 'block';
+    }*/
+
+  /*  document.getElementById('btn2').onclick = function(){
+        document.getElementById('box').style.width = '0';
+        document.getElementById('box').style.height ='0';
+        document.getElementById('box').style.opacity = '0';
+
+    }*/
+    
+    let btn2 = document.getElementById('btn2');
+    let box = document.getElementById('box');
+
+    btn2.onclick = function(){
+        box.style.width= '0';
+        box.style.height = '0';
+        box.style.opacity = '0';
+
+
+    }
+    
+    </script>
+</body>
+</html>

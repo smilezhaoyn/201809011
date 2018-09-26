@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div id="nr"></div>
+    <script>
+    function fn(){
+    let a = new Date;
+    let y = a.getFullYear();
+    let m = a.getMonth();
+    let dd = a.getDate();
+    let h = a.getHours();
+    let fz = a.getMinutes();
+    let miao = a.getSeconds();
+    nr.innerHTML= `${y}年${tDOM(y)}月${tDOM(dd)}日${tDOM(h)}时${tDOM(fz)}分${tDOM(miao)}秒`
+
+                    }
+        //让位数统一为两位
+    function tDOM(ws){
+        return ws<10?'0'+ws:''+ws;
+    }
+
+    fn();
+    setInterval(fn,1000)
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box"></div>
+    <script>
+    let mom={
+        name:'赵',
+        age:'30',
+        job:'家庭主妇',
+        city:'北京',
+        children:[{
+                name:'等等',
+                age:'15',
+                job:'初中',
+                xihao:'画画'
+                  },{
+                      name:'小花',
+                      age:'6',
+                      job:'小学',
+                      xihao:'唱歌'
+                  },{
+                      name:'超超',
+                      age:'2',
+                      job:'小孩',
+                      xihao:'睡觉'
+                  }
+                ]
+    }
+    
+    let p = '<p>mom:'
+    for(let b in mom){
+
+        if(b == 'children'){
+         p += mom[b].length+'个孩子';
+            // console.log(mom[b].length);  // 结果是3
+        }else{
+           p+= b +':'+ mom[b]+',' ;
+        //    console.log(p);
+        }
+        p+= '</p>';
+        console.log(p);
+    }
+    
+    
+    </script>
+</body>
+</html>

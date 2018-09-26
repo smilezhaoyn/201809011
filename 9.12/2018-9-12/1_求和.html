@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+ <input type="text" id="t1">
+ <input type="text" id="t2">   
+ <button id="btn"> 确定</button>
+
+ <script>
+ const t1 = document.getElementById('t1');
+ const t2 = document.getElementById('t2');
+ const btn = document.getElementById('btn');
+
+ btn.onclick = function(){
+  //   console.log( Number(t1) + Number(t2))
+
+  let tt1 = t1.value;
+  let tt2 = t2.value;
+ console.log( Number(tt1) + Number(tt2))
+
+ }
+ 
+ 
+ 
+ </script>
+</body>
+</html>

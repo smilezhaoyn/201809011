@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let  ary = [12,3,88,100,67,39,20,99];
+    let newAry = [];
+    newAry.push(ary[0]);
+
+    for(let i=1;i<ary.length;i++){
+        let ary1 = ary[i];
+        for(let j =newAry.length-1;j>=0;j--){
+            if(ary1<newAry[j]){
+
+                if(j===0){
+                    newAry.unshift(ary1);
+                }
+
+            }else{
+                newAry.splice(j+1,0,ary1);
+                break;
+            }
+
+        }
+
+        console.log(newAry);
+
+
+
+    }
+    
+    
+    </script>
+</body>
+</html>

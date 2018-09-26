@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="box"></div>
+<script>
+   let box = document.getElementById('box');
+   let w = document.getElementById('box').style.width='100';
+   let h = document.getElementById('box').style.height='200';
+   let b = document.getElementById('box').style.background='red';
+
+  // box.innerHTML = '<p>'+ '<style>+'w+h+b+'</style>'+'</p>';
+   box.innerHTML = '<p style="width:'+ w +'px; height: '+ h +'px; background: '+ b +'"></p>'
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Document</title>
+</head>
+<body>
+    <div id="box"></div>
+     
+</body>
+<script>
+
+    let w = 300;
+    let h = 400;
+    let b = 'red';
+    let box = document.getElementById('box');
+    box.innerHTML = '<p style="width:'+w+'px;height:'+h+'px;background:'+b+';"></p>';
+
+    box.innerHTML = `<p style="width:${w}px;height:${h}px;background:${b};"></p>`;
+
+
+
+    //box.innerHTML = `<p style="width:${w}px;height:${h}px;background:${b}"></p>`;
+
+
+</script>
+</html>
